@@ -32,11 +32,11 @@ const data = ['Alexandre', 'Thomas', 'Lucien']
 
 const Wrapper = () => {
   return (
-	  <Cards onEnd={action('end')} className='master-root'>
+	  <Cards onEnd={() => action('end')} className='master-root'>
         {data.map(item => 
           <Card 
-            onSwipeLeft={action('swipe left')} 
-            onSwipeRight={action('swipe right')}>
+            onSwipeLeft={() => action('swipe left')} 
+            onSwipeRight={() => action('swipe right')}>
             <h2>{item}</h2>
           </Card>
         )}

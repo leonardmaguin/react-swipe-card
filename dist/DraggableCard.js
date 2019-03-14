@@ -128,7 +128,7 @@ var DraggableCard = function (_Component) {
       var direction = getDirection();
 
       if (this.props['onSwipe' + direction]) {
-        this.props['onSwipe' + direction];
+        this.props['onSwipe' + direction]();
         this.props['onOutScreen' + direction](this.props.index);
       } else {
         this.resetPosition();
